@@ -644,7 +644,15 @@
 # for key,value in student.items():
 #     print(key ,":",value)
 
-
+# 3. Mutable vs Immutable
+# Data type	Mutable or Immutable?
+# List	Mutable
+# Dictionary	Mutable
+# Set	Mutable
+# String	Immutable
+# Integer	Immutable
+# Float	Immutable
+# Tuple	Immutable
 
 
 
