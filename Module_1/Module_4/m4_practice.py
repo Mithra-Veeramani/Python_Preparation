@@ -654,6 +654,90 @@
 # Float	Immutable
 # Tuple	Immutable
 
+# Next concept: Creating a separate copy
+# numbers = [10, 20, 30]
+
+# another_numbers = numbers.copy()
+
+# another_numbers[1] = 100
+
+# print(numbers)
+# print(another_numbers)
+
+# a = [1, 2, 3]
+# b = a.copy()
+
+# b.append(4)
+
+# print(a)
+# print(b)
+
+# Next: Mutable objects inside functions
 
 
+# students = {
+#     "ST101": {
+#         "name": "Mithra",
+#         "marks": 85
+#     },
+#     "ST102": {
+#         "name": "Ananya",
+#         "marks": 90
+#     },
+#     "ST103": {
+#         "name": "Arjun",
+#         "marks": 85
+#     },
+#     "ST104": {
+#         "name": "Mohana",
+#         "marks": 95
+#     },
+#     "ST105": {
+#         "name": "Priya",
+#         "marks": 88
+#     },
+#     "ST106": {
+#         "name": "Rahul",
+#         "marks": 92
+#     },
+#     "ST107": {
+#         "name": "Anandh",
+#         "marks": 80
+#     }
+# }
+
+# # Display all student records
+# print("ALL STUDENT RECORDS")
+# print("-------------------")
+
+# for student_id, student in students.items():
+#     print("Student ID:", student_id)
+#     print("Name:", student["name"])
+#     print("Marks:", student["marks"])
+
+#     if student["marks"] >= 40:
+#         print("Result: Pass")
+#     else:
+#         print("Result: Needs Improvement")
+
+#     print("-------------------")
+
+# # Search student by ID
+# student_id = input("Enter student ID: ").strip().upper()
+
+# student = students.get(student_id)
+
+# if student:
+#     print("\nStudent Details")
+#     print("-----------------")
+#     print("ID:", student_id)
+#     print("Name:", student["name"])
+#     print("Marks:", student["marks"])
+
+#     if student["marks"] >= 40:
+#         print("Result: Pass")
+#     else:
+#         print("Result: Needs Improvement")
+# else:
+#     print("Student not found")
 
