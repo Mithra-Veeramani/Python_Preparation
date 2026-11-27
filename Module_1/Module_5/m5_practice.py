@@ -118,6 +118,8 @@
 # order_details("Keyboard", quantity=1, price=1500)
 
 # Next: 5.7 — Variable-Length Arguments
+# What is *args?
+# *args allows a function to accept multiple positional arguments without specifying the number of parameters in advance.
 
 # def cal_total(*args):
 #     total = 0
@@ -131,7 +133,1127 @@
 # print("Total 2:", result2)
 # print("Total 3:", result3)
 
+# What is **kwargs?
+# **kwargs allows a function to accept multiple keyword arguments without knowing how many arguments will be passed.
+# Python collects these arguments into a dictionary.
 
 
+# def employee_details(**kwargs):
+#     print(kwargs)
+# employee_details(
+#     name="Mithra",
+#     role="Python Developer",
+#     salary=45000
+# )
+# # 2. Accessing values inside **kwargs
+# def employee_details(**kwargs):
+#     print("Name:", kwargs["name"])
+#     print("Role:", kwargs["role"])
+#     print("Salary:", kwargs["salary"])
+# employee_details(
+#     name="Mithra",
+#     role="Python Developer",
+#     salary=45000
+# )
+# # 3. Looping through **kwargs
+# def employee_details(**kwargs):
+#     for key, value in kwargs.items():
+#         print(key, ":", value)
+
+# employee_details(
+#     name="Mithra",
+#     role="Python Developer",
+#     salary=45000,
+#     department="IT"
+# )
+# # Practice Exercise 2:
+# def student_details(**kwargs):
+#     for key,value in kwargs.items():
+#         print(key,":",value)
+# student_details(
+#     name="Ananya",
+#     age=21,
+#     course="Python Programming",
+#     marks=95,
+#     city="Bangalore"
+# )
+
+# what is scope in python?
+    # Scope means the area of a program where a variable is accessible.
+# They are mainly two types of scope in Python:
+    # Local Scope/Function Scope: Variables defined inside a function are accessible only within that function.
+        # def display_employee():
+        #     name = "Mithra"
+        #     print("Employee Name:", name)
+        # display_employee()
+    # Global Scope: Variables defined outside any function are accessible from anywhere in the program.
+        # company = "GeniusJobs"
+        # def display_company():
+        #     print("Company:", company)
+        # display_company()
+        # print(company)
+#To modify the global variable using a keyword global inside a function.
+        # salary = 40000
+        # def update_salary():
+        #   global salary
+        #   salary = 45000
+        # update_salary()
+        # print("Updated Salary:", salary)
+# Lambda Functions in Python
+# A lambda function is a small anonymous function (a function without a regular name) written in a single expression.
+# Syntas:
+#   lambda arguments: expression
+# 
+# Regular function:
+    # def square(number):
+    #     return number * number
+    # print(square(5))
+
+# Lambda function:
+    # square = lambda number: number * number
+    # print(square(5))
+# Regular function and lambda function using map() function
+# Syntax:
+#   map(function, iterable)
+# example:
+# # salaries = [20000,25000,30000,35000]
+# updated_salaries = map(lambda salary:salary + 5000,salaries)
+# print("Original Salaries:", salaries)
+# print("Updated Salaries:", list(updated_salaries))
 
 
+# monthly_salaries = [50000,60000,70000,80000]
+
+# def updated_salaries(salary):
+#   return salary + 5000
+# new_salary = map(updated_salaries,monthly_salaries)
+# print("Original Salaries:", monthly_salaries)
+# print("Updated Salaries:", list(new_salary))
+#
+# Lambda Functions – filter() in Python
+# Regular function and lambda function using filter() function
+#   filter() is a built-in Python function used to select specific elements from an iterable based on a condition.
+# Syntax:
+#   filter(function, iterable)
+#
+# Using filter() with a regular function
+#
+# salaries = [15000, 25000, 30000, 45000, 60000]
+
+# def check_salary(salary):
+#   return salary >= 30000
+# result = filter(check_salary,salaries)
+# print("Original Salaries:",salaries)
+# print("Checked_salaries",list(result))
+
+# Using filter() with a lambda function
+
+# monthly_salaries = [15000, 25000, 30000, 45000, 60000]
+# result = filter(lambda salary : salary >= 30000,monthly_salaries)
+# print("Original Salaries:",monthly_salaries)
+# print("Checked_salaries",list(result))
+#
+# Module 5.7 Basic Recursion in Python
+# In recursion, a function calls itself repeatedly until a particular condition is satisfied.
+# Every recursive function needs a stopping condition.
+# Each recursive call should move towards that stopping condition.
+# Too many recursive calls can cause a RecursionError.
+# 
+# Practice Exercise 3:
+# print("SIMPLE CALCULATOR")
+# print("=================")
+# def addition(a,b):
+#   return a+b
+# def subtraction(a,b):
+#   return a-b
+# def multiplication(a,b):
+#   return a*b
+# def division(a,b):
+#   if b == 0:
+#     return "cannot divided by zeroo"
+#   return a/b
+
+# num1 = int(input("Enter First number: "))
+# operator = input("Enter operator (+,-,*,/): ")  
+# num2 = int(input("Enter First number: "))
+
+# if operator == "+":
+#   result = addition(num1,num2)
+# elif operator == "-":
+#   result = subtraction(num1,num2)
+# elif operator == "*":
+#   result = multiplication(num1,num2)
+# elif operator == "/":
+#   result = division(num1,num2)
+# else:
+#   result = "Invalid Operator"
+
+# print("Result:",num1,operator,num2,"=",result)
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
